@@ -67,9 +67,6 @@ bool LKTracker::filterPts(vector<Point2f>& points1,vector<Point2f>& points2){
 
   fbmed = median(FB_error);
   for( i=k = 0; i<points2.size(); ++i ){
-// status has already been checked and also the indexes are now out of sync after previous resizing
-//      if( !status[i])
-//        continue;
       if(FB_error[i] <= fbmed){
         points1[k] = points1[i];
         points2[k] = points2[i];
